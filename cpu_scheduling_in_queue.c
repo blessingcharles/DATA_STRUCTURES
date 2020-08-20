@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #define MAX 5
-
+/* AUTHOR TH3H04X */
 
 void calculate_waiting_time(int bt[],int wt[],int service_time[],int arrival_time[])
 {
@@ -57,8 +57,8 @@ int main(int argc , char *argv[])
     }
     float t = (float)total_turnaround_time/(float)MAX ;
     float w = (float)total_waiting_time/(float)MAX ;
-    printf("\nTOTAL WORKING TIME    -------> %0.3f\n",t);
-    printf("\nTOTAL TURN AROUND TIME -------> %0.3f\n",w);
+    printf("\nTOTAL WORKING TIME    -------> %0.3f\n",w);
+    printf("\nTOTAL TURN AROUND TIME -------> %0.3f\n",t);
     
 
     return 0 ;
