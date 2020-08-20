@@ -15,16 +15,11 @@ int push(){
     scanf("%d",&n);
     printf("\n\nenter 1 to insert into stack 1 and enter 2 to insert into stack2 :");
     scanf("%d",&ch);
-    switch (ch)
-    {
-    case 1: {
-        arr[++top1] = ch;
-        break;}
-    case 2: {
-        arr[--top2] = ch ;
-        break;
-        }
-    }
+    if (ch == 1)
+        arr[++top1] = n;
+    else
+        arr[--top2] = n;
+
     return 0;    
 }
 
@@ -65,18 +60,20 @@ void display(){
             printf("stack1 is empty");
             return ;
         }
-        for(i=top1;i<=0 ;i++) {
-            printf("[########STACK1##########]\n");
+        printf("[########STACK1##########]\n");
+
+        for(i=top1;i>=0 ;i--) {
             printf("the elements are %d\n",arr[i]);
         }
+        
     }
     else{
         if(top2==MAX){
             printf("stack2 is empty\n");
             return ;
         }
+        printf("[########STACK2##########]\n");
         for(i=top2;i<MAX;i++){
-            printf("[########STACK2##########]\n");
             printf("the elements are %d\n",arr[i]);
         }
     }
